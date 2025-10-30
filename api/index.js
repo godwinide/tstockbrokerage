@@ -96,5 +96,5 @@ const createApp = async () => {
 // Export for Vercel serverless
 module.exports = async (req, res) => {
     const expressApp = await createApp();
-    return expressApp(req, res);
+    expressApp(req, res);
 };
