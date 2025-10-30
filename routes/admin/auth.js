@@ -2,6 +2,7 @@ const router = require("express").Router();
 const passport = require("passport");
 const { forwardAuthenticated, ensureAdmin } = require("../../config/auth");
 
+
 router.get("/signin", (req, res) => {
     try {
         return res.render("admin/signin", { 
