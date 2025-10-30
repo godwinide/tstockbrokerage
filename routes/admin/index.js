@@ -29,7 +29,6 @@ router.get("/", ensureAdmin, async (req, res) => {
     catch (err) {
         console.error(err);
         req.flash('error_msg', 'Internal server error');
-        return res.redirect("/admin");
     }
 });
 
@@ -40,7 +39,6 @@ router.post("/", ensureAdmin, async (req, res) => {
     catch (err) {
         console.error(err);
         req.flash('error_msg', 'Internal server error');
-        return res.redirect("/admin");
     }
 });
 
