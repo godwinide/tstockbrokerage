@@ -1,0 +1,688 @@
+<!-- Hero Start -->
+<section class="bg-half-170 d-table w-100 position-relative bg-dark" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80') center center; background-size: cover;">
+    <style>
+        .bg-half-170 {
+            height: 100vh;
+            max-height: 700px;
+        }
+        @media (max-width: 768px) {
+            .bg-overlay {
+                display: none;
+            }
+            .bg-half-170 {
+                background-size: cover !important;
+                background-position: center !important;
+            }
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #fff;
+            margin-left: 0.1rem;
+            animation: blink 1s infinite;
+        }
+        .cursor.typing {
+            animation: none;
+        }
+        @keyframes blink {
+            0%  { background-color: #fff; }
+            49% { background-color: #fff; }
+            50% { background-color: transparent; }
+            99% { background-color: transparent; }
+            100%  { background-color: #fff; }
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .hero-cta {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+        }
+        .title-heading {
+            margin-top: 6rem !important;
+        }
+    </style>
+    <div class="bg-overlay" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.9) 40%, transparent 50%);"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7">
+                <div class="mt-4 title-heading">
+                    <div class="hero-badge">
+                        <span class="content text-white">⚡ Tesla Stock • Electric Future • Sustainable Growth</span>
+                    </div>
+                    <h1 class="hero-title text-white">Invest in Tesla's<br><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const typedTextSpan = document.querySelector('.typed-text');
+                            const cursorSpan = document.querySelector('.cursor');
+
+                            const textArray = ['Electric Revolution', 'Sustainable Future', 'Innovation Leader', 'Clean Energy Vision'];
+                            const typingDelay = 100;
+                            const erasingDelay = 50;
+                            const newTextDelay = 2000;
+                            let textArrayIndex = 0;
+                            let charIndex = 0;
+
+                            function type() {
+                                if (charIndex < textArray[textArrayIndex].length) {
+                                    if(!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+                                    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                                    charIndex++;
+                                    setTimeout(type, typingDelay);
+                                } else {
+                                    cursorSpan.classList.remove('typing');
+                                    setTimeout(erase, newTextDelay);
+                                }
+                            }
+
+                            function erase() {
+                                if (charIndex > 0) {
+                                    if(!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+                                    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                                    charIndex--;
+                                    setTimeout(erase, erasingDelay);
+                                } else {
+                                    cursorSpan.classList.remove('typing');
+                                    textArrayIndex++;
+                                    if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+                                    setTimeout(type, typingDelay + 1100);
+                                }
+                            }
+
+                            if(textArray.length) setTimeout(type, newTextDelay + 250);
+                        });
+                    </script>
+                    <p class="hero-subtitle text-white">Tesla Stock Market helps investors capitalize on the electric vehicle revolution and sustainable energy transformation led by Tesla's groundbreaking innovations</p>
+                    <div class="mt-5">
+                        <a href="/register" class="hero-cta btn btn-light">Invest in Tesla Now</a>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+
+
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--end section-->
+<!-- Hero End -->
+
+<!-- Tesla Stock Widget BEGIN -->
+<div style="height:80px; background: linear-gradient(135deg, #e31837, #ff4757); overflow:hidden; box-sizing: border-box; border-radius: 8px; text-align: center; line-height:20px; font-size: 16px; padding: 20px; margin: 20px 0; width: 100%; color: white; font-weight: bold;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
+        <div>📈 TSLA: $248.50 <span style="color: #90EE90;">+2.4%</span></div>
+        <div>🔋 Market Cap: $789.2B</div>
+        <div>⚡ Volume: 45.2M</div>
+        <div>🚗 P/E Ratio: 58.4</div>
+    </div>
+</div>
+<!-- Tesla Stock Widget END -->
+
+<!-- Security Section Start -->
+<section class="overflow-hidden section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="text-center col-12">
+                <div class="pb-2 mb-4 section-title">
+
+                    <h4 class="mb-4 title">Tesla Investment Security</h4>
+
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row">
+            <div class="pt-2 mt-4 col-md-6 col-12">
+                <div class="text-center border-0 rounded card">
+                    <div class="card-body">
+                        <div class="p-3 shadow bg-soft-primary roundedd d-inline-block">
+                            <img src="/temp/images/icon/key.svg" class="avatar avatar-small"
+                                alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h5><a href="javascript:void(0)" class="text-dark">Security</a></h5>
+                            <p class="mt-3 mb-0 text-muted">Tesla Stock Market uses bank-level security protocols and 256-bit SSL encryption to protect your Tesla investment portfolio and personal information from unauthorized access.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+
+
+
+            <div class="pt-2 mt-4 col-md-6 col-12">
+                <div class="text-center border-0 rounded card">
+                    <div class="card-body">
+                        <div class="p-3 shadow bg-soft-primary roundedd d-inline-block">
+                            <img src="/temp/images/icon/locked.svg"
+                                class="avatar avatar-small" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h5><a href="javascript:void(0)" class="text-dark">Two Factor Auth</a></h5>
+                            <p class="mt-3 mb-0 text-muted">Two-factor authentication (2FA) by default on all Online
+                                Trade accounts, to securely protect you from unauthorised access and impersonation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+
+<!-- End Security Section Start -->
+
+<!-- Features Section Start -->
+<section class="overflow-hidden section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="text-center col-lg-7 col-md-7">
+                <div class="pb-2 mb-4 section-title">
+
+                    <h4 class="mb-4 title "> Tesla Investment Services</h4>
+                    <p class="mx-auto mb-0 text-muted para-desc">Comprehensive Tesla stock investment solutions designed to help you capitalize on the electric vehicle revolution!</p>
+                </div>
+            </div>
+            <!--end col-->
+
+        </div>
+        <!--end row-->
+
+
+        <!--end col-->
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-8">
+                <div class="pt-2 mt-4 row">
+                    <div class="col-md-6 col-12">
+                        <div class="pt-4 pb-4 media features">
+                            <div class="mt-2 mr-3 text-center icon rounded-circle text-primary">
+                                <i data-feather="activity" class="fea icon-ex-md text-primary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="title"> Tesla Analytics Platform</h4>
+                                <p class="mb-0 text-muted para">Advanced Tesla stock analysis tools with real-time data, production metrics, and market insights for informed investment decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-6 col-12">
+                        <div class="pt-4 pb-4 media features">
+                            <div class="mt-2 mr-3 text-center icon rounded-circle text-primary">
+                                <i data-feather="credit-card" class="fea icon-ex-md text-primary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="title">Tesla Growth Potential</h4>
+                                <p class="mb-0 text-muted para">Capitalize on Tesla's exponential growth in EV market share, energy storage, and autonomous driving technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-6 col-12">
+                        <div class="pt-4 pb-4 media features">
+                            <div class="mt-2 mr-3 text-center icon rounded-circle text-primary">
+                                <i data-feather="zap" class="fea icon-ex-md text-primary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="title">Instant Tesla Trades</h4>
+                                <p class="mb-0 text-muted para">Lightning-fast Tesla stock execution with real-time pricing and zero delays for optimal entry and exit points.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-6 col-12">
+                        <div class="pt-4 pb-4 media features">
+                            <div class="mt-2 mr-3 text-center icon rounded-circle text-primary">
+                                <i data-feather="shield" class="fea icon-ex-md text-primary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="title">Ultimate Security</h4>
+                                <p class="mb-0 text-muted para">With advanced security systems, we keep your account
+                                    always protected.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-6 col-12">
+                        <div class="pt-4 pb-4 media features">
+                            <div class="mt-2 mr-3 text-center icon rounded-circle text-primary">
+                                <i data-feather="message-circle" class="fea icon-ex-md text-primary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="title">24/7 live chat Support</h4>
+                                <p class="mb-0 text-muted para">Connect with our 24/7 support and Market Analyst
+                                    on-demand.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+
+
+                </div>
+                <!--end row-->
+            </div>
+            <!--end col-->
+
+            <div class="pt-2 mt-4 text-center col-lg-4 col-md-4 col-12 text-md-right">
+                <img src="/temp/images/app/phone.png" class="img-fluid" alt="">
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!-- End Features Section Start -->
+
+
+<!-- INv Section Start -->
+<section class="overflow-hidden section bg-soft-primary">
+    <div class="container mt-100 mt-60 ">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <img src="/temp/images/app/laptop.png" class="img-fluid " alt="">
+            </div>
+            <!--end col-->
+
+            <div class="pt-2 mt-4 col-lg-6 col-md-6 mt-sm-0 pt-sm-0">
+                <div class="section-title ml-lg-5">
+                    <h4 class="mb-4 title">Tesla Investment on the Go - Mobile-First Experience
+                    </h4>
+                    <p class="text-muted">Monitor Tesla stock performance, track your portfolio, and execute trades from anywhere in the world with our mobile-optimized Tesla investment platform!</p>
+
+                    <a href="/about" class="mt-3 h6 text-primary">Find Out More <i
+                            class="mdi mdi-chevron-right"></i></a>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!-- INv Section Start -->
+
+
+<!-- Pricing Section Start -->
+<section class="mt-4 overflow-hidden section" id="pricing">
+    <div class="container mt-100 mt-60">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="pb-2 mb-4 text-center section-title">
+                    <h4 class="mb-4 title"><span class="text-primary">Tesla Investment Plans</span></h4>
+                    <p class="mx-auto mb-0 para-desc text-muted">Choose your Tesla investment strategy based on your risk tolerance and growth objectives</p>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row">
+
+            <div class="pt-2 mt-4 col-lg-4 col-md-6">
+                <div class="p-4 border-0 rounded-md shadow card pricing-rates business-rate">
+                    <div class="p-0 card-body">
+                        <span class="px-4 py-2 mb-0 rounded-lg d-inline-block bg-soft-primary h6 text-primary">Tesla Starter
+                            Plan</span>
+                        <h2 class="mt-3 mb-0 font-weight-bold">$ 5,000
+                        </h2>
+                        <p class="text-muted">Entry Level Tesla Investment</p>
+
+
+
+                        <ul class="pt-3 list-unstyled border-top">
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Min. Possible
+                                deposit:
+                                $4500</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Max. Possible
+                                deposit:
+                                $5000</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$35,000.00
+                                Minimum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$35,000.00
+                                Maximum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$1000
+                                Gift Bonus</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="login" class="btn btn-block btn-primary">Buy Now</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="pt-2 mt-4 col-lg-4 col-md-6">
+                <div class="p-4 border-0 rounded-md shadow card pricing-rates business-rate">
+                    <div class="p-0 card-body">
+                        <span class="px-4 py-2 mb-0 rounded-lg d-inline-block bg-soft-primary h6 text-primary">Tesla Growth
+                            Plan</span>
+                        <h2 class="mt-3 mb-0 font-weight-bold">$ 2,000
+                        </h2>
+                        <p class="text-muted">Balanced Tesla Portfolio</p>
+
+
+
+                        <ul class="pt-3 list-unstyled border-top">
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Min. Possible
+                                deposit:
+                                $1,500</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Max. Possible
+                                deposit:
+                                $2,000</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$18,000.00
+                                Minimum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$35,000.00
+                                Maximum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$500
+                                Gift Bonus</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="login" class="btn btn-block btn-primary">Buy Now</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="pt-2 mt-4 col-lg-4 col-md-6">
+                <div class="p-4 border-0 rounded-md shadow card pricing-rates business-rate">
+                    <div class="p-0 card-body">
+                        <span class="px-4 py-2 mb-0 rounded-lg d-inline-block bg-soft-primary h6 text-primary">Tesla Pro
+                            Plan</span>
+                        <h2 class="mt-3 mb-0 font-weight-bold">$ 8,000
+                        </h2>
+                        <p class="text-muted">Advanced Tesla Strategy</p>
+
+
+
+                        <ul class="pt-3 list-unstyled border-top">
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Min. Possible
+                                deposit:
+                                $7,500</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Max. Possible
+                                deposit:
+                                $8,000</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$56,000.00
+                                Minimum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$56,000.00
+                                Maximum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$2,000
+                                Gift Bonus</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="login" class="btn btn-block btn-primary">Buy Now</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="pt-2 mt-4 col-lg-4 col-md-6">
+                <div class="p-4 border-0 rounded-md shadow card pricing-rates business-rate">
+                    <div class="p-0 card-body">
+                        <span class="px-4 py-2 mb-0 rounded-lg d-inline-block bg-soft-primary h6 text-primary">Tesla Elite
+                            Plan</span>
+                        <h2 class="mt-3 mb-0 font-weight-bold">$ 10,000
+                        </h2>
+                        <p class="text-muted">Premium Tesla Investment</p>
+
+
+
+                        <ul class="pt-3 list-unstyled border-top">
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Min. Possible
+                                deposit:
+                                $9,000</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>Max. Possible
+                                deposit:
+                                $10,000</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$85,000.00
+                                Minimum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$90,000.00
+                                Maximum return</li>
+                            <li class="mb-0 h6 text-muted"><span class="mr-2 text-primary h5"><i
+                                        class="align-middle uil uil-check-circle"></i></span>$4,000
+                                Gift Bonus</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="login" class="btn btn-block btn-primary">Buy Now</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+
+
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!-- End Pricing Section Start -->
+
+
+<!-- Crypto price Section Start -->
+
+<section class="mt-5 overflow-hidden section bg-soft-primary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="text-center col-12">
+                <div class="pb-2 mb-4 section-title">
+                    <h4 class="mb-4 title">Tesla Stock Performance</h4>
+                    <p class="mx-auto mb-0 text-muted para-desc">
+                        Real-time Tesla stock data and market analysis</p>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="market-box ">
+                    <div class="market-content">
+                        <div style="background: linear-gradient(135deg, #e31837, #ff4757); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                            <h5 style="color: white; margin-bottom: 10px;">📈 TSLA Stock</h5>
+                            <div style="font-size: 24px; font-weight: bold;">$248.50</div>
+                            <div style="color: #90EE90; font-size: 14px;">+$5.85 (+2.4%)</div>
+                        </div>
+                    </div>
+
+                    <!--pattern end-->
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="market-box">
+                    <div class="market-content">
+                        </script>
+                        <div style="background: linear-gradient(135deg, #333, #666); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                            <h5 style="color: white; margin-bottom: 10px;">🔋 Energy Storage</h5>
+                            <div style="font-size: 24px; font-weight: bold;">+45%</div>
+                            <div style="color: #90EE90; font-size: 14px;">YoY Growth</div>
+                        </div>
+                    </div>
+                    <!--pattern start-->
+
+                    <!--pattern end-->
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="market-box">
+                    <div class="market-content">
+                        <div style="background: linear-gradient(135deg, #4CAF50, #8BC34A); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                            <h5 style="color: white; margin-bottom: 10px;">🚗 Vehicle Deliveries</h5>
+                            <div style="font-size: 24px; font-weight: bold;">1.8M</div>
+                            <div style="color: white; font-size: 14px;">2024 Target</div>
+                        </div>
+                    </div>
+                    <!--pattern start-->
+
+                    <!--pattern end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Crypto price Section Start  End-->
+
+
+<!-- Testimonial Section Start -->
+<section class="mt-5 overflow-hidden section">
+    <div class="container mt-100 mt-60">
+        <div class="row justify-content-center">
+            <div class="text-center col-12">
+                <div class="pb-2 mb-4 section-title">
+                    <h4 class="mb-4 title">What our Customer says!</h4>
+                    <p class="mx-auto mb-0 text-muted para-desc">Don&#039;t take our word for it, here&#039;s what some
+                        of our clients have to say about us</p>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="mt-4 row justify-content-center">
+            <div class="col-lg-8 col-12">
+                <div id="single-owl" class="owl-carousel owl-theme">
+                    <!-- Review Start -->
+                    <div class="m-2 overflow-hidden border-0 card roundedd">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col-md-5">
+                                <img src="/storage/app/public/photos/upload-testimonial-1.jpg1617292794"
+                                    class="img-fluid w-75" alt="">
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-md-7">
+                                <div class="card-body customer-testi">
+                                    <h6 class="text-primary font-weight-bold">Sarah Ona<small
+                                            class="text-muted d-block">Principal</small></h6>
+                                    <ul class="mb-0 list-unstyled">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
+                                        </li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
+                                        </li>
+                                    </ul>
+                                    <p class="mb-0 text-muted h6 font-italic">"I love this platform"</p>
+                                </div>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                    <!-- Review End -->
+
+                    <!-- Review Start -->
+
+                </div>
+                <!-- Review End -->
+            </div>
+            <!--end owl-fade-->
+        </div>
+        <!--end col-->
+    </div>
+    <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+
+<!--End Testimonial Section  -->
+
+<!-- Sign up Section Start -->
+<section class="overflow-hidden section mt-60 bg-soft-primary">
+    <div class="container">
+        <div class="p-4 roundedd bg-primary p-lg-5">
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <div class="text-center section-title text-md-left">
+                        <h4 class="mb-3 text-white title title-dark">Join the Tesla Investment Revolution</h4>
+                        <p class="mb-0 text-white">Tesla Stock Market empowers investors to participate in the sustainable energy transformation and electric vehicle revolution led by Tesla's innovative technology</p>
+                    </div>
+                </div>
+                <!--end col-->
+
+                <div class="mt-4 col-md-4 mt-sm-0">
+                    <div class="text-center text-md-right">
+                        <a href="/register" class="pt-3 pb-3 pl-4 pr-4 btn btn-light">Create
+                            Free
+                            Account</a>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+    </div>
+    <!--end container-->
+</section>
+<!-- End Sign up Section  -->
