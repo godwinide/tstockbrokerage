@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { ensureAuthenticated } = require("../config/auth");
-const upload = require("../config/upload");
 const DepositTransaction = require("../model/DepositTransaction");
 const Investment = require("../model/Investment");
 const Site = require("../model/Site");
