@@ -34,7 +34,18 @@ router.get("/", ensureAdmin, async (req, res) => {
 
 router.post("/", ensureAdmin, async (req, res) => {
     try {
-        return res.redirect("/admin");
+        const users = await User.find({ isAdmin: false });
+        const pendingDeposits = await Deposit.find({ status: "pending" }).populate("user");
+        const pendingWithdrawals = await Withdraw.find({ status: "pending" }).populate("user");
+        return res.render("admin/dashboard", { 
+            layout: "layout3", 
+            req,
+            res,
+            comma, 
+            users, 
+            pendingDeposits, 
+            pendingWithdrawals
+        });
     }
     catch (err) {
         console.error(err);
