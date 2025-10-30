@@ -22,6 +22,19 @@ router.get('/', ensureAuthenticated, (req, res) => {
     }
 });
 
+router.post('/', ensureAuthenticated, (req, res) => {
+    try {
+        res.render('dashboard', {
+            user: req.user,
+            comma: commaFunc,
+            layout: 'layout2'
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Server Error');
+    }
+});
+
 router.get('/tradingHistory', ensureAuthenticated, async(req, res) => {
     try {
         const history = await TradeHistory.find({ user: req.user._id }).sort({ createdAt: -1 });
